@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contoh halaman daftar pendaftar mahasiswa baru">
+  <title>Daftar Pendaftar | Aplikasi Pendaftaran Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Aplikasi Pendaftaran Mahasiswa</h1>
+      <p class="subtitle">Contoh sistem pendaftaran mahasiswa baru berbasis HTML.</p>
+    </div>
+    <nav aria-label="Navigasi utama">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Daftar pendaftar</a></li>
+        <li><a href="pendaftaran.html">Formulir pendaftaran</a></li>
+        <li><a href="detail-pendaftaran.html">Detail pendaftaran</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Daftar pendaftar</h2>
+      <p>Data berikut hanya contoh fiktif untuk menggambarkan daftar calon mahasiswa.</p>
+      <p><a href="pendaftaran.html" class="btn">Buka formulir pendaftaran</a></p>
+      <div class="table-wrapper">
+        <table>
+          <caption>Contoh data pendaftaran mahasiswa baru</caption>
+          <thead>
+            <tr><th scope="col">Nomor pendaftaran</th><th scope="col">Nama calon mahasiswa</th><th scope="col">Program studi</th><th scope="col">Jalur masuk</th><th scope="col">Status</th><th scope="col">Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">PMB-001</th><td>Kemas Faris Rahadiansyah</td><td>Informatika</td><td>Reguler</td><td><span class="badge badge-warning">Menunggu verifikasi</span></td><td><a href="detail-pendaftaran.html">Lihat detail PMB-001</a></td></tr>
+            <tr><th scope="row">PMB-002</th><td>Rafi Pratama</td><td>Sistem Informasi</td><td>Prestasi</td><td><span class="badge badge-warning">Menunggu verifikasi</span></td><td>Belum ada halaman detail</td></tr>
+            <tr><th scope="row">PMB-003</th><td>Intan Lestari</td><td>Manajemen</td><td>Reguler</td><td><span class="badge badge-warning">Menunggu verifikasi</span></td><td>Belum ada halaman detail</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Halaman detail yang tersedia saat ini menampilkan contoh PMB-001. Data belum tersimpan secara otomatis.</p>
+    </article>
+  </main>
+  <footer><p>Kemas Faris Rahadiansyah — 103022300040 | Tugas Webpro: CSS</p></footer>
+</body>
+</html>

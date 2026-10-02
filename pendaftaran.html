@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulir contoh pendaftaran mahasiswa baru">
+  <title>Formulir Pendaftaran | Aplikasi Pendaftaran Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Aplikasi Pendaftaran Mahasiswa</h1>
+    </div>
+    <nav aria-label="Navigasi utama">
+      <ul class="nav-list">
+        <li><a href="index.html">Daftar pendaftar</a></li>
+        <li><a href="pendaftaran.html" aria-current="page">Formulir pendaftaran</a></li>
+        <li><a href="detail-pendaftaran.html">Detail pendaftaran</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Formulir pendaftaran mahasiswa baru</h2>
+      <p>Ini adalah contoh struktur HTML. Formulir belum menyimpan data karena belum ada backend. Jangan masukkan data pribadi asli.</p>
+      <form action="#" method="post" class="form-pendaftaran">
+        <div class="form-group">
+          <label for="nama">Nama lengkap</label>
+          <input id="nama" name="nama" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Alamat email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telepon">Nomor telepon</label>
+          <input id="telepon" name="telepon" type="tel" required>
+        </div>
+        <div class="form-group">
+          <label for="asal-sekolah">Asal sekolah</label>
+          <input id="asal-sekolah" name="asal_sekolah" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="prodi">Pilihan program studi</label>
+          <select id="prodi" name="prodi" required>
+            <option value="">Pilih program studi</option>
+            <option value="informatika">Informatika</option>
+            <option value="sistem-informasi">Sistem Informasi</option>
+            <option value="manajemen">Manajemen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jalur">Jalur pendaftaran</label>
+          <select id="jalur" name="jalur" required>
+            <option value="">Pilih jalur</option>
+            <option value="reguler">Reguler</option>
+            <option value="prestasi">Prestasi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat domisili</label>
+          <textarea id="alamat" name="alamat" rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Kirim formulir (contoh)</button>
+          <button type="reset" class="btn btn-secondary">Kosongkan</button>
+        </div>
+      </form>
+      <p><a href="index.html">Kembali ke daftar pendaftar</a></p>
+    </article>
+  </main>
+  <footer><p>Kemas Faris Rahadiansyah — 103022300040 | Tugas Webpro: CSS</p></footer>
+</body>
+</html>

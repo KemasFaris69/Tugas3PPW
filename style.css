@@ -1,0 +1,385 @@
+/* ===================================================
+   style.css — Aplikasi Pendaftaran Mahasiswa
+   Kemas Faris Rahadiansyah — 103022300040
+   Tugas 3: CSS Native (tanpa framework)
+   =================================================== */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #1e40af;
+  color: #ffffff;
+  padding: 0;
+}
+
+.header-inner {
+  padding: 1.5rem 2rem 0.75rem;
+}
+
+.subtitle {
+  color: #bfdbfe;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Navigation (ul/ol styling) ---------- */
+nav {
+  background-color: #1e3a8a;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  flex-shrink: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #dbeafe;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.nav-list a:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-list a[aria-current="page"] {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---------- Main content ---------- */
+main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+article {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Table ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+thead {
+  background-color: #e2e8f0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-weight: 600;
+  color: #334155;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ---------- Badge (span styling) ---------- */
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* ---------- Form ---------- */
+.form-pendaftaran {
+  max-width: 520px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  color: #1e293b;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* ---------- Detail card (div grouping) ---------- */
+.detail-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.4rem 1rem;
+}
+
+dt {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+dd {
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+/* ---------- Figure / Illustration ---------- */
+.ilustrasi {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.ilustrasi img {
+  max-width: 160px;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+}
+
+/* ===================================================
+   Responsive: @media query
+   Navigasi horizontal -> vertikal di layar sempit
+   =================================================== */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .header-inner {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  /* Navigasi berubah dari horizontal ke vertikal */
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list a {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  main {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  article {
+    padding: 1.25rem;
+  }
+
+  /* Tabel bisa di-scroll horizontal */
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 0.4rem 0.5rem;
+  }
+
+  /* Definition list jadi single-column */
+  dl {
+    grid-template-columns: 1fr;
+  }
+
+  dt {
+    margin-top: 0.5rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
